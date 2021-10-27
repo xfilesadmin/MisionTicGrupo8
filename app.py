@@ -9,7 +9,6 @@ def hello():
 def login():
     return render_template('login.html')
 
-
 @app.route('/iniciar')
 def iniciar():
     return render_template('login.html')
