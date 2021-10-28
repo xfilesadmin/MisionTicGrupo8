@@ -7,3 +7,6 @@ body {
   p {
     color: red;
   }
+  tr {
+    background-color: orange;
+  }
