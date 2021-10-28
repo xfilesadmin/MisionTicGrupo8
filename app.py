@@ -17,6 +17,11 @@ def iniciar():
 def registro():
     return render_template('registro.html')
 
+
+@app.route('/retroalimentacion')
+def retroalimentacion():
+    return render_template('retroalimentacion.html')
+
 @app.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
@@ -32,6 +37,7 @@ def creactividad():
 @app.route('/detactividad')
 def detactividad():
     return render_template('detalle_actividad.html')
+
 
 if __name__ == '__main__':
     app.jinja_env.auto_reload = True
