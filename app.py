@@ -17,7 +17,6 @@ def iniciar():
 def registro():
     return render_template('registro.html')
 
-
 @app.route('/retroalimentacion')
 def retroalimentacion():
     return render_template('retroalimentacion.html')
@@ -30,10 +29,6 @@ def dashboard():
 def infodocente():
     return render_template('info_docente.html')
 
-@app.route('/infoestudiante')
-def infoestudiante():
-    return render_template('info_estudiante.html')
-
 @app.route('/creactividad')
 def creactividad():
     return render_template('creacion_actividad.html')
@@ -41,6 +36,18 @@ def creactividad():
 @app.route('/detactividad')
 def detactividad():
     return render_template('detalle_actividad.html')
+
+@app.route('/resultadoBusquedas')
+def resultadoBusquedas():
+    return render_template('resultadoBusquedas.html')
+
+@app.route('/visualizacionNotas')
+def visualizacionNotas():
+    return render_template('visualizacionNotas.html')
+
+@app.route('/infoestudiante')
+def infoestudiante():
+    return render_template('info_estudiante.html')
 
 
 if __name__ == '__main__':
