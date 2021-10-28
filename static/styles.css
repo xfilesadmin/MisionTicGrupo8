@@ -1,0 +1,15 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(233, 233, 233);
+  }
+  h3 {
+    color: blue;
+  }
+  p {
+    color: red;
+  }
+  /*TABLAS*/
+  tr {
+    background-color: orange;
+    text-align: center;
+  }
