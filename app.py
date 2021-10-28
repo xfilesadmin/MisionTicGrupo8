@@ -30,6 +30,10 @@ def dashboard():
 def infodocente():
     return render_template('info_docente.html')
 
+@app.route('/infoestudiante')
+def infoestudiante():
+    return render_template('info_estudiante.html')
+
 @app.route('/creactividad')
 def creactividad():
     return render_template('creacion_actividad.html')
