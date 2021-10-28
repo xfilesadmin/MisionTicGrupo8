@@ -19,6 +19,10 @@ def iniciar():
 def registro():
     return render_template('registro.html')
 
+@app.route('/retroalimentacion')
+def retroalimentacion():
+    return render_template('retroalimentacion.html')
+
 if __name__ == '__main__':
     app.jinja_env.auto_reload = True
     app.config['TEMPLATES_AUTO_RELOAD'] = True

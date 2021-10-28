@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+box-sizing: border-box;
+}
+
+
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* Style the header */
+header {
+background-color: #666;
+height: 60px;
+
+
+font-size: 15px;
+color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+float: left;
+width: 10%;
+height: 300px; /* only for demonstration, should be removed */
+background: #ccc;
+padding: 20px;
+}
+
+
+
+/* Style the list inside the menu */
+nav ul {
+
+list-style-type: none;
+padding: 0;
+}
+
+
+
+article {
+float: left;
+padding: 20px;
+width: 90%;
+background-color: #f1f1f1;
+height: 300px; /* only for demonstration, should be removed */
+}
+
+
+
+/* Clear floats after the columns */
+section::after {
+content: "";
+display: table;
+clear: both;
+}
+
+
+
+/* Style the footer */
+footer {
+background-color: #777;
+padding: 10px;
+text-align: center;
+color: white;
+}
+
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+nav, article {
+width: 100%;
+height: auto;
+}
+}
+
+.user{
+    float: left;
+    width: 50%;
+}
+
+.codigo2{
+    float: right;
+    width: 50%;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <div><label>Universidad San Buenaventura </label></div>
+    <div align ="center"><label >PLATAFORMA DE GESTION DE NOTAS</label></div>
+    <div align="right"><label>User</label></div>
+</header>
+
+<section>
+<nav>
+<ul>
+<li><a href="#">Inicio</a></li>
+<li><a href="#">Perfil</a></li>
+<li><a href="#">Actividades</a></li>
+</ul>
+</nav>
+
+<article>
+<h3 align= "center">RETROALIMENTACION DE ACTIVIDAD</h3>
+<section>
+    <div class="user"><label id="usuario">Nombre usuario</label>
+    <br>
+    <br>
+    <label>Curso</label> &nbsp; <label id="curso"></label>
+</div>
+<div class="codigo2"><label>Codigo</label>&nbsp;<label id="codigo"></label>
+    <br>
+    <br>
+    <label>Programa</label> &nbsp; <label id="programa"></label>
+</section>
+</article>
+</section>
+
+
+
+<footer>
+<p>Footer</p>
+</footer>
+
+
+</body>
+</html>
