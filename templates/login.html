@@ -6,33 +6,7 @@
 {% block css %}
 
     <style>
-        .fa,
-        .fas {
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900; }
-
-        .fa-thumbs-down:before {
-        content: "\f165"; }
-
-        .fa-thumbs-up:before {
-        content: "\f164"; }
-
-        .fa-lg {
-        font-size: 1.33333em;
-        line-height: 0.75em;
-        vertical-align: -.0667em; }
-
-        .fa-xs {
-        font-size: .75em; }
-
-        .fa-sm {
-        font-size: .875em; }
-
-        .fa-pull-left {
-  float: left; }
-
-.fa-pull-right {
-  float: right; }
+        
 
         * {
         box-sizing: border-box;
@@ -102,36 +76,33 @@
 
 
 <br>
-<center>
 
-        <label class="titulo2">
-            LOGIN DE USUARIO
-        </label>
-        <br>
-        <br>
 
-        <div class="input-group margin-bottom-sm">
-            <span class="input-group-addon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
-            <input class="form-control" type="text" placeholder="Email address">
+    <div class="container p-4">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
           </div>
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-            <input class="form-control" type="password" placeholder="Password">
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
           </div>
-          
-          
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">iniciar sesion</button>
+              
+          <a href="/registro"><button>Registrarse</button></a>
+        </div>
+        <p></p>
+            <a href="">Olvido su contraseña</a>
+            <p></p>
         
-        <br>
-        <br>
-        <input type="checkbox" id="recordarUsuario">
-        <label class="recordarUsuario">Recordar usuario</label>
-        <br>
-        <button onclick="guardarInformacion">ACCEDER</button>
-        <br>
-    
-    
-    
-    </div>
-</center>
+        </form>
+        </div>
+
 
 {%endblock%}
