@@ -82,30 +82,22 @@
         </ul>
         </nav>
         
-        <article>
-        <h3 align= "center">RETROALIMENTACION DE ACTIVIDAD</h3>
         <section>
-            <div class="mb-3">
-                <label for="user" class="form-label">Nombre usuario</label>
-                <input type="text" class="form-control" id="Nombre Apellido" aria-describedby="userlHelp">
-              </div>
-            <br>
-            <div class="mb-3">
-                <label for="curso" class="form-label">Curso</label>
-                <input type="text" class="form-control" id="Curso" aria-describedby="cursolHelp">
-              </div>
-        </div>
-        <div class="mb-3">
-            <label for="codigo" class="form-label">Codigo</label>
-            <input type="text" class="form-control" id="Codigo" aria-describedby="codigolHelp">
-          </div>
-            <br>
-            <div class="mb-3">
-                <label for="programa" class="form-label">Programa</label>
-                <input type="text" class="form-control" id="programa" aria-describedby="programaHelp">
-              </div>
-        </section>
-        </article>
+            <h1>Retroalimentacion Actividad</h1>
+            <form action="" method="post">
+                <div>
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuario"> 
+                </div>
+                <div>
+                    <input type="text" name="codigo" id="codigo" placeholder="Codigo"> 
+                </div>
+                <div>
+                    <input type="text" name="curso" id="curso" placeholder="Curso"> 
+                </div>
+                <div>
+                    <input type="text" name="programa" id="programa" placeholder="Programa"> 
+                </div>
+            </form>
         </section>
 
 {%endblock%}

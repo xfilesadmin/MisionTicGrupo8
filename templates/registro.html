@@ -1,9 +1,8 @@
 {%extends 'layout.html' %}
 
-{%block titulo%}
-<title>REGISTRO</title>
-{%block}
-
+{%block estilos%}
+    <link rel="stylesheet" href="{{url_for('static', filname='css/estilos.css')}}">
+{%endblock%}
 
 {% block contenido%}
 
@@ -48,12 +47,25 @@
     <label>Usuario:</label>
     <input type="text">
     <br>
+    <div>
+        <label>Contrasena:</label>
+    <input type="password" name="contrasena" id="contrasena" placeholder="Contrasena">
+    <img src="{{ url_for('static', filename='img/ver.png')}}" alt="" class="ver" id="ver_contrasena">
+    </div>
+    <div>
+        <label>Confirmar contrasena:</label>
+    <input type="password" name="confirmar" id="confirmar_contrasena" placeholder="Confirmar contrasena">
+    <img src="{{ url_for('static', filename='img/ver.png')}}" alt="" class="ver" id="ver_confirmar_contrasena">
+    </div>  
+    <br>
     <input type="submit" value="Acceder"/>
     <input type="submit" value="Registrarse">
 </form>
 </div>
 
 <p></p>
-
-
 {%endblock%}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/registro.js')}}"></script>
+{% endblock%}

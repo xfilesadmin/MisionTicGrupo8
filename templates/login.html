@@ -1,6 +1,8 @@
 {%extends 'layout.html' %}
 
-
+{%block estilos%}
+    <link rel="stylesheet" href="{{url_for('static', filname='css/estilos.css')}}">
+{%endblock%}
 {% block contenido%}
 
 {% block css %}
@@ -76,33 +78,33 @@
 
 
 <br>
-
-
-    <div class="container p-4">
-        <form>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-          <button type="submit" class="btn btn-primary">iniciar sesion</button>
-              
-          <a href="/registro"><button>Registrarse</button></a>
+    <div>
+      <h1>Registro Usuario</h1>
+      <form action="" method="post">
+        <div>
+          <img src="{{ url_for('static', filename='img/user.png')}}" alt="" class="ver">
+          <label>Usuario:</label>
+          <input type="text" name="usuario" id="usuario" placeholder="Usuario">
         </div>
+        <div>
+          <img src="{{ url_for('static', filename='img/password.png')}}" alt="" class="ver">
+          <label>Password:</label>
+          <input type="password" name="contrasena" id="contrasena" placeholder="Contrasena"> 
+          <img src="{{ url_for('static', filename='img/ver.png')}}" alt="" class="ver">
+        </div>
+        <input type="checkbox" id="recordarUsuario">
+        <label class="recordarUsuario">Recordar usuario</label>
+        <br>
+        <input type="submit" value="Iniciar sesion" >
+        <input type="submit" value="Registrarse">
         <p></p>
-            <a href="">Olvido su contraseña</a>
-            <p></p>
-        
-        </form>
-        </div>
-
+        <a href="">Olvido su contraseña</a>
+        <p><span>Registrate</span></p>
+      </form>
+    </div>
 
 {%endblock%}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/login.js')}}"></script>
+{% endblock%}
