@@ -15,9 +15,9 @@
 </div>
 
 <h3>Registro de usuario</h3>
-
-    <div>
-<form>
+<section>
+<div>
+<form action="" method="post" onsubmit= "return validar_formulario()"> 
     <label>Nombre:</label>
     <input type="text">
     <label type="text" >Apellido:</label>
@@ -33,7 +33,7 @@
     <input type="date">
     <br>
     <label>correo:</label>
-    <input type="email">
+    <input type="email" name="correo" id="correo" placeholder="Correo">
     <br>
     <label>Direccion</label>
     <input type="text">
@@ -43,12 +43,12 @@
     <br>
     <label>Rol:</label>
     <input type="search">
-    <br>
-    <label>Usuario:</label>
-    <input type="text">
-    <br>
     <div>
-        <label>Contrasena:</label>
+    <label>Usuario:</label>
+    <input type="usuario" name="usuario" id="usuario" placeholder="Usuario">
+    </div>
+    <div>
+    <label>Contrasena:</label>
     <input type="password" name="contrasena" id="contrasena" placeholder="Contrasena">
     <img src="{{ url_for('static', filename='img/ver.png')}}" alt="" class="ver" id="ver_contrasena">
     </div>
@@ -58,12 +58,18 @@
     <img src="{{ url_for('static', filename='img/ver.png')}}" alt="" class="ver" id="ver_confirmar_contrasena">
     </div>  
     <br>
-    <input type="submit" value="Acceder"/>
-    <input type="submit" value="Registrarse">
+    <input type="submit" value="Iniciar Sesion">
 </form>
 </div>
 
-<p></p>
+<div>
+    <p>
+        Ya tienes cuenta?
+        <span>Iniciar sesion</span>
+    </p>
+</div>
+</section>
+
 {%endblock%}
 
 {% block scripts %}
