@@ -17,11 +17,8 @@
 <section>
 <div>
     <h3>Registro de usuario</h3>
-    <form action="" method="post" onsubmit= "return validar_formulario()"> 
-    <div>
-        <label>Nombre:</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-    </div>
+    <form action="/registar_usuario" method="post" onsubmit= "return validar_formulario()"> 
+    <!--
     <div>
         <label>Apellido:</label>
         <input type="text" name="apellido" id="apellido" placeholder="Apellido">
@@ -43,10 +40,6 @@
         <input type="text" name="direccion" id="direccion" placeholder="Direccion">
     </div>
     <div>
-    <label>correo:</label>
-    <input type="email" name="correo" id="correo" placeholder="ejemplo@example.com">
-    </div>
-    <div>
         <label>Celular:</label>
         <input type="number" name="celular" id="celular" placeholder="1234567890">
     </div>
@@ -54,10 +47,18 @@
         <label>Rol:</label>
         <input type="search" name="rol" id="rol" placeholder="Estudiante">
     </div>
-    <div>
+    <div>-->
+        <div>
+            <label>Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+        </div>
         <label>Usuario:</label>
         <input type="text" name="usuario" id="usuario" placeholder="Usuario">
     </div>
+    <div>
+        <label>correo:</label>
+        <input type="email" name="correo" id="correo" placeholder="ejemplo@example.com">
+        </div>
     <div>
         <label>Contrasena:</label>
         <input type="password" name="contrasena" id="contrasena" placeholder="**********">

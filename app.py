@@ -1,4 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import db, werkzeug.security as ws
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -9,13 +11,45 @@ def hello():
 def login():
     return render_template('login.html')
 
+@app.route('/iniciar_sesion', methods=['POST'])
+def validar_iniciar_sesion():
+    usuario = request.form['usuario']
+    contrasena = request.form['contrasena']
+
+    registro_usuario = db.obtener_registros('usuario', "usuario = '{}'".format(usuario))
+
+    if registro_usuario:
+        contrasena_db = registro_usuario [0][4]
+
+        inicio_exitoso = ws.check_password_hash(contrasena_db, contrasena)
+
+        if inicio_exitoso:
+            return 'Inicio sesion exitoso'
+        else: 
+            return 'Verifique usuario y contrasena'
+    else:
+        return 'El usuario no existe'
+
 @app.route('/iniciar')
-def iniciar():
+def validar_iniciar():
     return render_template('login.html')
 
 @app.route('/registro')
 def registro():
     return render_template('registro.html')
+
+@app.route('/registar_usuario', methods=['POST'])
+def registar_usuario():
+    #validar datos
+    nombre = request.form['nombre']
+    usuario = request.form['usuario']
+    correo = request.form['correo']
+    contrasena = request.form['contrasena']
+    confirmar_contrasena = request.form['confirmar_contrasena']
+
+    db.insert_usuario(nombre, usuario, correo, ws.generate_password_hash(contrasena))
+
+    return render_template('perfil.html')
 
 @app.route('/retroalimentacion')
 def retroalimentacion():

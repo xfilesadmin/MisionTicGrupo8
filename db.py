@@ -1,6 +1,5 @@
 import sqlite3
 from sqlite3 import Error
-from sqlite3.dbapi2 import Cursor
 
 def obtener_conexion():
     try:
@@ -9,7 +8,7 @@ def obtener_conexion():
     except Error:
         print(Error)
     
-def obtener_registros(tabla,condicion=None):
+def obtener_registros(tabla, condicion=None):
     conexion = obtener_conexion()
     cursor = conexion.cursor()
 
@@ -24,12 +23,13 @@ def obtener_registros(tabla,condicion=None):
 
     return datos
 
-def insert_usuario(nombre,usuario,correo,contrasena):
+def insert_usuario(nombre, usuario, correo, contrasena):
     conexion = obtener_conexion()
     cursor = conexion.cursor()
 
-    strsql = "INSERT INTO usuario (nombre, usuario, correo, contrasena) VALUES ('{}','{}','{}','{}')".format(nombre,usuario, correo, contrasena)
+    strsql = "INSERT INTO usuario (nombre, usuario, correo, contrasena) VALUES ('{}','{}','{}','{}')".format(nombre, usuario, correo, contrasena)
 
     cursor.execute(strsql)
-    conexion.commitconexion.close()
+    conexion.commit
+    conexion.close()
 
