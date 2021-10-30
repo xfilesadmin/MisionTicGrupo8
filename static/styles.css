@@ -1,6 +1,12 @@
 .ver{
   width: 20px;
 }
+.user{
+  width: 20px;
+}
+.pass{
+  width: 20px;
+}
 .ver:hover{
   cursor: pointer;
 }
@@ -42,7 +48,7 @@ body {
       text-align: center;
   }
   p {
-    color: red;
+    color: rgb(43, 3, 153);
     line-height: 1.8;
   }
   /* TABLES */

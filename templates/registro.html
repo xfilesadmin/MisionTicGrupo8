@@ -14,62 +14,70 @@
     <a href="#about">About</a>
 </div>
 
-<h3>Registro de usuario</h3>
 <section>
 <div>
-<form action="" method="post" onsubmit= "return validar_formulario()"> 
-    <label>Nombre:</label>
-    <input type="text">
-    <label type="text" >Apellido:</label>
-    <input>
-    <br>
-    <label>Tipo de documento:</label>
-    <input type="search">
-
-    <label>Documento:</label>
-    <input type="number">
-    <br>
-    <label>Fecha de nacimiento:</label>
-    <input type="date">
-    <br>
-    <label>correo:</label>
-    <input type="email" name="correo" id="correo" placeholder="Correo">
-    <br>
-    <label>Direccion</label>
-    <input type="text">
-    <br>
-    <label>Celular:</label>
-    <input type="number">
-    <br>
-    <label>Rol:</label>
-    <input type="search">
+    <h3>Registro de usuario</h3>
+    <form action="" method="post" onsubmit= "return validar_formulario()"> 
     <div>
-    <label>Usuario:</label>
-    <input type="usuario" name="usuario" id="usuario" placeholder="Usuario">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
     </div>
     <div>
-    <label>Contrasena:</label>
-    <input type="password" name="contrasena" id="contrasena" placeholder="Contrasena">
-    <img src="{{ url_for('static', filename='img/ver.png')}}" alt="" class="ver" id="ver_contrasena">
+        <label>Apellido:</label>
+        <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+    </div>
+    <div>
+        <label>Tipo documento:</label>
+        <input type="search" name="tipo_documento" id="tipo_documento" placeholder="Tipo documento">
+    </div>
+    <div>
+        <label>Documento:</label>
+        <input type="number" name="documento" id="documento" placeholder="Documento">
+    </div>
+    <div>
+        <label>Fecha nacimiento:</label>
+        <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="dd/mm/aaaa">
+    </div>
+    <div>
+        <label>Direccion:</label>
+        <input type="text" name="direccion" id="direccion" placeholder="Direccion">
+    </div>
+    <div>
+    <label>correo:</label>
+    <input type="email" name="correo" id="correo" placeholder="ejemplo@example.com">
+    </div>
+    <div>
+        <label>Celular:</label>
+        <input type="number" name="celular" id="celular" placeholder="1234567890">
+    </div>
+    <div>
+        <label>Rol:</label>
+        <input type="search" name="rol" id="rol" placeholder="Estudiante">
+    </div>
+    <div>
+        <label>Usuario:</label>
+        <input type="text" name="usuario" id="usuario" placeholder="Usuario">
+    </div>
+    <div>
+        <label>Contrasena:</label>
+        <input type="password" name="contrasena" id="contrasena" placeholder="**********">
+        <img src="{{ url_for('static', filename='img/ver.png')}}" alt="" class="ver" id="ver_contrasena">
     </div>
     <div>
         <label>Confirmar contrasena:</label>
-    <input type="password" name="confirmar" id="confirmar_contrasena" placeholder="Confirmar contrasena">
-    <img src="{{ url_for('static', filename='img/ver.png')}}" alt="" class="ver" id="ver_confirmar_contrasena">
+        <input type="password" name="confirmar_contrasena" id="confirmar_contrasena" placeholder="**********">
+        <img src="{{ url_for('static', filename='img/ver.png')}}" alt="" class="ver" id="ver_confirmar_contrasena">
     </div>  
-    <br>
-    <input type="submit" value="Iniciar Sesion">
+    <input type="submit" value="Iniciar sesion">
 </form>
 </div>
-
 <div>
     <p>
-        Ya tienes cuenta?
-        <span>Iniciar sesion</span>
+        Ya tienes cuenta?... 
+        <a href="/login">Iniciar sesion</a>
     </p>
 </div>
 </section>
-
 {%endblock%}
 
 {% block scripts %}

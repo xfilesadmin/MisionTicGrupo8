@@ -77,31 +77,35 @@
     </nav>
 
 
-<br>
+<section>
     <div>
       <h1>Registro Usuario</h1>
       <form action="" method="post">
         <div>
-          <img src="{{ url_for('static', filename='img/user.png')}}" alt="" class="ver">
+          <img src="{{ url_for('static', filename='img/user.png')}}" alt="" class="user">
           <label>Usuario:</label>
           <input type="text" name="usuario" id="usuario" placeholder="Usuario">
         </div>
         <div>
-          <img src="{{ url_for('static', filename='img/password.png')}}" alt="" class="ver">
+          <img src="{{ url_for('static', filename='img/password.png')}}" alt="" class="pass">
           <label>Password:</label>
           <input type="password" name="contrasena" id="contrasena" placeholder="Contrasena"> 
           <img src="{{ url_for('static', filename='img/ver.png')}}" alt="" class="ver">
         </div>
-        <input type="checkbox" id="recordarUsuario">
-        <label class="recordarUsuario">Recordar usuario</label>
-        <br>
-        <input type="submit" value="Iniciar sesion" >
-        <input type="submit" value="Registrarse">
-        <p></p>
-        <a href="">Olvido su contraseña</a>
-        <p><span>Registrate</span></p>
+        <div>
+          <input type="checkbox" id="recordarUsuario">
+          <label class="recordarUsuario">Recordar usuario</label>
+        </div>
+        <div>
+        <input type="submit" value="Iniciar sesion">
+      </div>
+        <p>
+          No tienes cuenta?.... 
+          <span>Registrate</span>
+        </p>
       </form>
     </div>
+</section>
 
 {%endblock%}
 
